@@ -3,6 +3,9 @@ You are tasked with building a Text service, that has 4 endpoints:
 
 Note that you can name your controller classes and methods whatever you like.
 
+
+
+
 Endpoint 1 - Camelize
 Write an endpoint that maps to GET /camelize with two parameters:
 
@@ -98,7 +101,12 @@ Example
 POST /s/little/lot
 
 a little of this and a little of that
+
 Would render:
 
 a lot of this and a lot of that
+
+
+
+
 Create a new repo for this project and submit your repo link below.

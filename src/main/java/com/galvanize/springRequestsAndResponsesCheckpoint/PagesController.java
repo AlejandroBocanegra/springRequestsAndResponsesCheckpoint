@@ -17,10 +17,15 @@ public class PagesController {
     //GET /camelize
     @GetMapping ("/camelize")
     public String getCamelize(
-            @RequestParam (value="snake_case") String snakeCase
+            @RequestParam (value="original") String snakeCase
     )
     {
-        return "hello from camelize";
+        if (snakeCase.contains("_")) {
+            String[] result = snakeCase.split("_");
+            return result[0];
+        }else {
+            return snakeCase;
+        }
     }
 
     //GET /redact
@@ -45,10 +50,15 @@ public class PagesController {
     //POST /s/<find>/<replacement>
     @PostMapping ("/s")
     public String findReplace (
+            @RequestParam (value= "body") String bodeh,
             @RequestParam (value= "find") String descry,
             @RequestParam (value= "replace") String oust
     )
     {
-        return "hello from s";
+        String body = bodeh;
+        String find = descry;
+        String replace = oust;
+        String findReplaceBody = body.replace(find,replace);
+        return findReplaceBody;
     }
 }
