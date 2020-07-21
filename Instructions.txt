@@ -8,13 +8,18 @@ Write an endpoint that maps to GET /camelize with two parameters:
 
 original (required) - a string in snake_case
 initialCap (optional) - a boolean
-It should render the given original string in camelCase. If initialCap is true, it uses CamelCase (the initial letter is capitalized).
+
+It should render the given original string in camelCase.
+If initialCap is true, it uses CamelCase (the initial letter is capitalized).
 
 Examples
 
 GET /camelize?original=this_is_a_thing => thisIsAThing
 
 GET /camelize?original=this_is_a_thing&initialCap=true => ThisIsAThing
+
+
+
 Endpoint 2 - Redact
 Write an endpoint that maps to GET /redact. The endpoint should take:
 
@@ -52,6 +57,9 @@ HINT: To get multiple values on the same parameter name you can use a List. See 
         return "the total is "+total;
 
     }
+
+
+
 Endpoint 3 - Encode
 Build an endpoint that maps to POST /encode that accepts url-encoded form data. It should take two parameters:
 
@@ -78,6 +86,10 @@ You see that "a" in the English alphabet is at the same index as "m" in the key.
 
 a little of this and a little of that
 m aohhas zt hnog myr m aohhas zt hnmh
+
+
+
+
 Endpoint 4 - Sed
 Build an endpoint that maps to POST /s/<find>/<replacement>. The post body should be text, and the endpoint should return the posted text, replacing all instances of find with replace.
 
